@@ -1,0 +1,21 @@
+#include<lpc21xx.h>
+void delay(unsigned int);
+int main()
+{
+IODIR0=0X0000000fF;
+while(1)
+{
+IOSET0=0X00000055;
+IOSET0=0X000000AA;
+delay(20);
+IOCLR0=0X000000AA;
+IOCLR0=0X00000055;
+delay(20);
+}
+}
+void delay(unsigned int i)
+{
+int j,k;
+for(j=0;j<k;i++)
+for(k=0;k<1275;k++);
+}
